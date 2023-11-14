@@ -22,7 +22,6 @@ def beep(result):
 
 # 제작자 정보
 def birth(result):
-  
       # 추가 예정
       list = {
         "202018388" : "NOHHYENGJUN",
