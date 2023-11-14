@@ -1,9 +1,9 @@
 from stack import stack
 
 def error_finder(test_data):
-    input_data = list('0123456789()+-')
+    input_data = list('0123456789()+-*')
     integers = list('0123456789')
-    operators = list('+-')
+    operators = list('+-*')
     s = stack.Stack()
 
     for i in range(len(test_data)):

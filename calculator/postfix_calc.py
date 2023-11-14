@@ -7,14 +7,14 @@ def Postfix_calc(postfix):
     st = stack.Stack()
     for cur in postfix:
         if cur in priority:
-            operands1 = st.pop()
-            operands2 = st.pop()
+            operands1 = int(st.pop())
+            operands2 = int(st.pop())
             if cur == '+':
-                st.push(plus(operands1, operands2))
+                st.push(plus(operands2, operands1))
             elif cur == '-':
-                st.push(minus(operands1, operands2))
+                st.push(minus(operands2, operands1))
             elif cur == '*':
-                st.push(multi(operands1, operands2))
+                st.push(multi(operands2, operands1))
         else:
             st.push(cur)
     return st.pop()
