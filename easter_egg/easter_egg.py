@@ -12,6 +12,8 @@ def beep(result):
         "17317071": "17317071 : I love you!"
     }
 
+    result = str(result)
+
     if result in messages:
         print(messages[result])
     else:
@@ -20,25 +22,24 @@ def beep(result):
 
 # 제작자 정보
 def birth(result):
-  
-  # 추가 예정
-  list = {
-    "202018388" : "NOHHYENGJUN",
-    "202012237" : "LIMSEONGHYUK"
-    
-  }
-  
-  if result in list:
-    print(list[result])
-  else:
-    return
+      # 추가 예정
+      list = {
+        "202018388" : "NOHHYENGJUN",
+        "202012237" : "LIMSEONGHYUK"
+
+      }
+
+      result = str(result)
+
+      if result in list:
+        print(list[result])
+      else:
+        return
   
 
 # 잭팟
 def jackpot(result):
-  if result in [111, 222, 333, 444, 555, 666, 777, 888, 999]:
-    print(result + "Jackpot!");
-  else:
-    return
-  
-  
+    if result in [111, 222, 333, 444, 555, 666, 777, 888, 999]:
+        print(result + "Jackpot!")
+    else:
+        return
