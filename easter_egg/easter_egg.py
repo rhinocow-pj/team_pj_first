@@ -3,13 +3,13 @@ import random
 # 삐삐호출
 def beep(result):
     messages = {
-        12486: "012486 : Forever love you!",
-        4486: "4486 : I love you even if I die!",
-        401: "401 : Love is forever!",
-        504: "504 : Only I love you!",
-        1052: "1052 : LOVE!",
-        1365244: "1365244 : I love you 24 hours a day, 365 days a year!",
-        17317071: "17317071 : I love you!"
+        "12486": "012486 : Forever love you!",
+        "4486": "4486 : I love you even if I die!",
+        "401": "401 : Love is forever!",
+        "504": "504 : Only I love you!",
+        "1052": "1052 : LOVE!",
+        "1365244": "1365244 : I love you 24 hours a day, 365 days a year!",
+        "17317071": "17317071 : I love you!"
     }
 
     if result in messages:
@@ -23,8 +23,9 @@ def birth(result):
   
   # 추가 예정
   list = {
-    202018388 : "NOHHYENGJUN",
-    202012237 : "LIMSEONGHYUK"
+    "202018388" : "NOHHYENGJUN",
+    "202012237" : "LIMSEONGHYUK"
+    
   }
   
   if result in list:
