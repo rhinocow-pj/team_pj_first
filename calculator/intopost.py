@@ -1,10 +1,10 @@
 import sys, os
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
-from stack import Stack
+from stack import stack
 from calc import priority
 
 def InToPost(infix):
-  s = Stack.Stack()
+  s = stack.Stack()
   postfix = []
   for i in infix:
     if i == '(':
