@@ -1,41 +1,31 @@
 import sys, os
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 
-from stack import stack
-from calc import plus, minus, multi, InPut
+from calc import Operands, InPut
 from intopost import InToPost
 from postfix_calc import Postfix_calc
 from errorfinder import error_finder
 from easter_egg import easter_egg
 
-# print("연동 테스트파일입니다.")
-# print("1.+,-,* 테스트를 위한 두개의 숫자 입력")
-#
-#
-# # a = int(input())
-# # b = int(input())
-# # c = plus(a,b)
-# # d = minus(a,b)
-# # f = multi(a,b)
-# # print(c,d,f)
-
-
-# test_data = list(input("스택을 이용해 연산 숫서 결정하기위한 함수 테스팅 입력 예) (2+3)*4:" ))
-# infix = Operands(test_data)
-# postfix = InToPost(infix)
-# print(postfix)
-# print(Postfix_calc(postfix))
 
 while True:
-     print("입력받기")
-     infix = InPut()
-     easter_egg.beep(infix[:-1])
-     easter_egg.birth(infix[:-1])
-     easter_egg.jackpot(infix[:-1])
-     if error_finder(infix) != None:
-        print("수식에 오류가 있습니다! 수식을 다시 확인해주세요!")
-        continue
+   print("입력받기")
+   test_data = InPut()
+   if error_finder(test_data) != None:
+       print(error_finder(test_data))
+       continue
+   elif(test_data == []):
+       print("피연산자 중복오류")
+       continue
 
-     postfix = InToPost(infix)
-     print(postfix)
-     print(Postfix_calc(postfix))
+   infix = Operands(test_data)
+   postfix = InToPost(infix)
+
+   print(postfix)
+
+   result = Postfix_calc(postfix)
+   print(result)
+
+   easter_egg.beep(result)
+   easter_egg.birth(result)
+   easter_egg.jackpot(result)
