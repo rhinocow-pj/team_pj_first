@@ -25,7 +25,7 @@ def beep(result):
 
 
 # 제작자 정보
-def birth(result):
+def student_id(result):
     # 추가 예정
     list = {
         "202018388" : "NOH",
@@ -36,8 +36,6 @@ def birth(result):
         "202012249" : "JO",
         "201010613" : "Park"
     }
-
-
 
     if result in list:
         print(list[result])
