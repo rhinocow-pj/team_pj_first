@@ -8,22 +8,18 @@ while True:
    print("수식을 입력해주세요")
    test_data = calc.InPut()
 
-   if errorfinder.error_finder(test_data) != None:
-       print(errorfinder.error_finder(test_data))
+   if(test_data == "easter_egg"):
        continue
-   elif(test_data == []):
+   elif(test_data == "error"):
        print("피연산자 중복오류")
        continue
-
+   elif errorfinder.error_finder(test_data) != None:
+       print(errorfinder.error_finder(test_data))
+       continue
+   
    infix = calc.Operands(test_data)
    postfix = intopost.InToPost(infix)
    result = postfix_calc.Postfix_calc(postfix)
 
-
-
-   if(len(infix) == 1):
-       easter_egg.beep(result)
-       easter_egg.birth(result)
-       easter_egg.jackpot(result)
-   else:
+   if(len(infix) != 1):
        print(result)
