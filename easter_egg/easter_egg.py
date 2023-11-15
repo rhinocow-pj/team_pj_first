@@ -29,6 +29,10 @@ def birth(result):
     list = {
         202018388: "NOH",
         202012237: "IM",
+        202118020: "KIM"
+        202012259: "HONG"
+        202018416: "HEO"
+        202012249: "JO"
     }
 
     result = int(result)
