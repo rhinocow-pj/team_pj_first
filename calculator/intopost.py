@@ -1,7 +1,7 @@
 import sys, os
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 from stack import stack
-from calc import priority
+from calculator import calc
 
 def InToPost(infix):
     s = stack.Stack()
@@ -13,9 +13,9 @@ def InToPost(infix):
         while s.peek() != '(':
           postfix.append(s.pop())
         s.pop()
-      elif i in priority:
+      elif i in calc.priority:
         while not s.is_empty():
-          if priority[s.peek()] >= priority[i]:
+          if calc.priority[s.peek()] >= calc.priority[i]:
             postfix.append(s.pop())
           else:
             break
