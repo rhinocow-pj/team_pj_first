@@ -10,7 +10,9 @@ def beep(result):
         504: "504 : Only I love you!",
         1052: "1052 : LOVE!",
         1365244: "1365244 : I love you 24 hours a day, 365 days a year!",
-        17317071: "17317071 : I love you!"
+        17317071: "17317071 : I love you!",
+        1004: "1004 : You are angel!",
+        8282: "8282 : Hurry up!",
     }
 
     result = int(result)

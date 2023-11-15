@@ -28,7 +28,6 @@ def InPut():
         for i in cur:
             infix.append(i)
             k += 1
-    print(infix)
     return infix
 
 def Operands(infix):
