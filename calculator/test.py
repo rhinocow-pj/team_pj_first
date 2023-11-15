@@ -9,8 +9,13 @@ from easter_egg import easter_egg
 
 
 while True:
-   print("입력받기")
+   print("수식을 입력해주세요")
    test_data = InPut()
+
+   infix = Operands(test_data)
+   postfix = InToPost(infix)
+   result = Postfix_calc(postfix)
+
    if error_finder(test_data) != None:
        print(error_finder(test_data))
        continue
@@ -18,14 +23,9 @@ while True:
        print("피연산자 중복오류")
        continue
 
-   infix = Operands(test_data)
-   postfix = InToPost(infix)
-
-   print(postfix)
-
-   result = Postfix_calc(postfix)
-   print(result)
-
-   easter_egg.beep(result)
-   easter_egg.birth(result)
-   easter_egg.jackpot(result)
+   if(len(infix) == 1):
+       easter_egg.beep(result)
+       easter_egg.birth(result)
+       easter_egg.jackpot(result)
+   else:
+       print(result)
