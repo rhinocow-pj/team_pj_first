@@ -19,8 +19,9 @@ def beep(result):
 
     if result in messages:
         print(messages[result])
+        return True
     else:
-        return
+        return False
 
 
 # 제작자 정보
@@ -29,14 +30,20 @@ def birth(result):
     list = {
         202018388: "NOH",
         202012237: "IM",
+        202118020: "KIM",
+        202012259: "HONG",
+        202018416: "HEO",
+        202012249: "JO",
+        202012259: "Park"
     }
 
     result = int(result)
 
     if result in list:
         print(list[result])
+        return True
     else:
-        return
+        return False
 
 
 # 잭팟
@@ -44,5 +51,6 @@ def jackpot(result):
     result = int(result)
     if result in [111, 222, 333, 444, 555, 666, 777, 888, 999]:
         print(str(result) + " Jackpot!")
+        return True
     else:
-        return
+        return False
