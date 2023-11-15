@@ -23,7 +23,7 @@ def InPut():
     k = 0
     while(1):
         cur = input()
-        if cur[0] in integers and (easter_egg.beep(cur) or easter_egg.birth(cur) or easter_egg.jackpot(cur)):
+        if cur[0] in integers and (easter_egg.beep(cur) or easter_egg.student_id(cur) or easter_egg.jackpot(cur)):
             return "easter_egg"
         if k != 0 and infix[k-1] in integers and cur[0] in integers:
             return "error"
