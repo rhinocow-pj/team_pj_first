@@ -2,7 +2,6 @@ import sys, os
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 
 from calculator import calc, errorfinder, intopost, postfix_calc
-from easter_egg import easter_egg
 
 while True:
    print("수식을 입력해주세요")
