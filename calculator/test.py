@@ -5,7 +5,7 @@ from calc import Operands, InPut
 from intopost import InToPost
 from postfix_calc import Postfix_calc
 from errorfinder import error_finder
-from easter_egg import easter_egg
+from easteregg import easter_egg
 
 
 while True:
