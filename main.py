@@ -10,7 +10,7 @@ while True:
    if(test_data == "easter_egg"):
        continue
    elif(test_data == "error"):
-       print("피연산자 중복오류")
+       print("[ERROR] Input Error")
        continue
    elif errorfinder.error_finder(test_data) != None:
        print(errorfinder.error_finder(test_data))
