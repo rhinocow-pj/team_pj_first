@@ -25,7 +25,7 @@ def InPut():
     while(1):
         cur = input()
         # 이스터에그 확인
-        if cur[0] in integers and (easter_egg.beep(cur) or easter_egg.student_id(cur) or easter_egg.jackpot(cur)):
+        if cur[0] in integers and (easter_egg.beep(cur) or easter_egg.student_id(cur) or easter_egg.jackpot(cur) or easter_egg.school_anniversary(cur)):
             return "easter_egg"
         # input 에러
         if cur in operators and k > 1 and infix[k-2] in integers and infix[k-1] in integers:
