@@ -29,7 +29,8 @@ def InPut():
             return "easter_egg"
         # input 에러
         if cur in operators and pre_inpt[1][-1] in integers and pre_inpt[0][-1] in integers:
-            return "error"
+            if cur == '!': return "[ERROR]"
+            else: return "[SYSTEM]"
         # factorial 음수 처리
         if (cur == '!' and pre_inpt[1][0] == '-'):
             return "f_error"
