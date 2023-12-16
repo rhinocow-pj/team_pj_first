@@ -30,6 +30,10 @@ def InPut():
         # input 에러
         if cur in operators and k > 1 and infix[k-2] in integers and infix[k-1] in integers:
             return "error"
+        # factorial 음수 처리
+        if (cur == '!' and pre[0] == '-'):
+            return "f_error"
+        pre = cur
         
         if cur == '=':
             break
