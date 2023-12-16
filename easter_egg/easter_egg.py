@@ -53,3 +53,17 @@ def jackpot(result):
         return True
     else:
         return False
+        
+#개교기념일
+def school_anniversary(result):
+    school_cases = {
+        "1015": "[EVENT] 전북대 개교기념일입니다."
+    }
+
+    result = str(result)
+
+    if result in school_cases:
+        print(school_cases[result])
+        return True
+    else:
+        return False
