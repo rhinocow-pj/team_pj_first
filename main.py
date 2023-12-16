@@ -12,6 +12,9 @@ while True:
    elif(test_data == "error"):
        print("[ERROR] Input Error")
        continue
+   elif(test_data == "f_error"):
+       print("[ERROR] Out Of Range")
+       continue
    elif errorfinder.error_finder(test_data) != None:
        print(errorfinder.error_finder(test_data))
        continue
