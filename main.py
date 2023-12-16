@@ -9,8 +9,8 @@ while True:
 
    if(test_data == "easter_egg"):
        continue
-   elif(test_data == "error"):
-       print("[ERROR] Input Error")
+   elif(test_data == "[ERROR]" or test_data == "[SYSTEM]"):
+       print(test_data + " Input Error")
        continue
    elif(test_data == "f_error"):
        print("[ERROR] Out Of Range")

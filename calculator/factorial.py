@@ -6,7 +6,8 @@ from calculator import calc
 # 명백한 구현
 def factorial(a):
     # 음수 팩토리얼 -> 에러처리
-    if (a < 0): return -1
+    # if (a < 0): return -1
+    # 입력 시 처리를 위해 Input에서 처리 후 main에서 처리하는 것으로 수정
 
     # 두 개 이상의 숫자 입력 -> 에러처리
     # calc에 Input()에서 처리 후 main에서 에러

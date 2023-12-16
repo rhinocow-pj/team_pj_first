@@ -21,25 +21,26 @@ def InPut():
     operators = list('+-*!')
 
     infix = []
-    k = 0
+    pre_inpt = [' ', ' ']  # 이전 입력 2개 저장
     while(1):
         cur = input()
         # 이스터에그 확인
         if cur[0] in integers and (easter_egg.beep(cur) or easter_egg.student_id(cur) or easter_egg.jackpot(cur) or easter_egg.school_anniversary(cur)):
             return "easter_egg"
         # input 에러
-        if cur in operators and k > 1 and infix[k-2] in integers and infix[k-1] in integers:
-            return "error"
+        if cur in operators and pre_inpt[1][-1] in integers and pre_inpt[0][-1] in integers:
+            if cur == '!': return "[ERROR]"
+            else: return "[SYSTEM]"
         # factorial 음수 처리
-        if (cur == '!' and pre[0] == '-'):
+        if (cur == '!' and pre_inpt[1][0] == '-'):
             return "f_error"
-        pre = cur
+        pre_inpt[0] = pre_inpt[1]
+        pre_inpt[1] = cur
         
         if cur == '=':
             break
         for i in cur:
             infix.append(i)
-            k += 1
     return infix
 
 def Operands(infix):
