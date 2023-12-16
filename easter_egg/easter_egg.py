@@ -18,7 +18,7 @@ def beep(result):
     result = str(result)
 
     if result in messages:
-        print(messages[result])
+        print("[EVENT]"+messages[result])
         return True
     else:
         return False
@@ -38,7 +38,7 @@ def student_id(result):
     }
 
     if result in list:
-        print(list[result])
+        print("[EVENT]"+list[result])
         return True
     else:
         return False
@@ -49,7 +49,7 @@ def jackpot(result):
     result = str(result)
 
     if result in ["111", "222", "333", "444", "555", "666", "777", "888", "999"]:
-        print(result + " Jackpot!")
+        print("[EVENT]"+result + " Jackpot!")
         return True
     else:
         return False
